@@ -26,6 +26,7 @@ body {
 
 .clickable {
   cursor: pointer;
+  pointer-events: all;
 }
 
 /* #region navbar */

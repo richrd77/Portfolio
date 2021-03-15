@@ -47,12 +47,12 @@
     <div class="container">
       <div class="home main">Home Page</div>
       <div class="skills main main-tile-fadeout">
-        <canvas id="myChart" width="400" height="400"></canvas>
+        <canvas id="myChart" style="height: 400px; width: 400px"></canvas>
       </div>
       <div class="services main main-tile-fadeout">Services Offered</div>
       <div class="contact main main-tile-fadeout">Contact Me</div>
     </div>
-    <footer class="footer">
+    <footer class="footer no-ui">
       <div>
         <i
           class="fab fa-github clickable social"
@@ -100,11 +100,64 @@
       function ShowTiles(tileName) {
         ToggleVisibility(document.querySelector(".main-tile-fadein"));
         ToggleVisibility(document.querySelector("." + tileName));
+        switch (tileName) {
+          case "skills":
+            LoadSkills();
+            break;
+        }
       }
 
       function ToggleVisibility(el) {
         el.classList.toggle("main-tile-fadein");
         el.classList.toggle("main-tile-fadeout");
+      }
+
+      function DrawCircle(canvas, percentage) {
+        const height = canvas.height;
+        const width = canvas.width;
+        const lw = 2;
+        const rad = height > width ? width : height;
+        console.log(height);
+        console.log(width);
+        console.log(rad);
+
+        let ctx = canvas.getContext("2d");
+        ctx.lineWidth = lw;
+
+        ctx.beginPath();
+        ctx.arc(
+          rad / 2,
+          rad / 2,
+          rad / 2.5,
+          0,
+          ((2 * percentage) / 100) * Math.PI
+        );
+        let gradient = ctx.createLinearGradient(0, 0, 170, 0);
+        gradient.addColorStop("0", "magenta");
+        gradient.addColorStop("0.5", "blue");
+        gradient.addColorStop("1.0", "red");
+
+        // Fill with gradient
+        ctx.strokeStyle = gradient;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(
+          rad / 2,
+          rad / 2,
+          rad / 2.5,
+          ((2 * percentage) / 100) * Math.PI,
+          2 * Math.PI
+        );
+        ctx.strokeStyle = "lightgrey";
+        ctx.stroke();
+
+        ctx.font = "1em Arial";
+        ctx.fillText(`${percentage}%`, rad / 2.5, rad / 2);
+      }
+
+      function LoadSkills() {
+        DrawCircle(document.getElementById("myChart"),40);
       }
     </script>
   </body>
