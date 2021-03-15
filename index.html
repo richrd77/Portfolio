@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Prakash</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css"
+      integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css"
+      integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/solid.min.css"
+      integrity="sha512-xIEmv/u9DeZZRfvRS06QVP2C97Hs5i0ePXDooLa5ZPla3jOgPT/w6CzoSMPuRiumP7A/xhnUBxRmgWWwU26ZeQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Redressed&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="header">
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-items">
+        <li>Home</li>
+        <li>Skills</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="home main">Home Page</div>
+      <div class="skills main main-tile-fadeout">
+        <canvas id="myChart" width="400" height="400"></canvas>
+      </div>
+      <div class="services main main-tile-fadeout">Services Offered</div>
+      <div class="contact main main-tile-fadeout">Contact Me</div>
+    </div>
+    <footer class="footer">
+      <div>
+        <i
+          class="fab fa-github clickable social"
+          onclick="window.open('https://github.com/richrd77','_blank')"
+        ></i>
+        <i
+          class="fab fa-facebook clickable social"
+          onclick="window.open('https://www.facebook.com/richardphynmen.p','_blank')"
+        ></i>
+        <i
+          class="fab fa-instagram-square clickable social"
+          onclick="window.open('https://www.instagram.com/honestcoder','_blank')"
+        ></i>
+        Richard Prakash
+      </div>
+      <span class="no-ui">Bidar&nbsp;&nbsp;&copy;2021</span>
+    </footer>
+    <script>
+      document.querySelector(".home").classList.toggle("main-tile-fadein");
+      document.querySelector(".home").classList.toggle("active");
+
+      document
+        .querySelector(".hamburger-menu")
+        .addEventListener("click", (e) => {
+          e.currentTarget.classList.toggle("menu-open");
+        });
+
+      document.querySelectorAll(".menu-items > li").forEach((i) => {
+        i.addEventListener("click", (e) => {
+          const currentLI = e.currentTarget;
+          ShowTiles(currentLI.innerText.toLowerCase());
+          // currentLI.classList.toggle('active');
+          if (
+            currentLI.parentNode.previousElementSibling.classList.contains(
+              "menu-open"
+            )
+          ) {
+            currentLI.parentNode.previousElementSibling.classList.toggle(
+              "menu-open"
+            );
+          }
+        });
+      });
+
+      function ShowTiles(tileName) {
+        ToggleVisibility(document.querySelector(".main-tile-fadein"));
+        ToggleVisibility(document.querySelector("." + tileName));
+      }
+
+      function ToggleVisibility(el) {
+        el.classList.toggle("main-tile-fadein");
+        el.classList.toggle("main-tile-fadeout");
+      }
+    </script>
+  </body>
+</html>
