@@ -139,12 +139,65 @@ body {
           animation: fade-out 0.5s ease-in-out 0s 1;
 }
 
-.circle {
-  border: 0.25em solid var(--bg-color);
-  display: inline-block;
-  margin: 1em;
-  height: 10em;
-  width: 10em;
+.skills {
+  background-color: lightgrey;
+}
+
+.skill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.skill-container > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.primary-skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 220px 220px 220px;
+      grid-template-columns: 220px 220px 220px;
+  -ms-grid-rows: 190px 190px 190px;
+      grid-template-rows: 190px 190px 190px;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  row-gap: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.primary-skill {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  background-color: var(--color);
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skill-circle {
+  height: 100%;
+  width: 100%;
+}
+
+.secondary-skills {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -213,6 +266,29 @@ body {
     opacity: 1;
     pointer-events: all;
     z-index: 1;
+  }
+  .main {
+    padding: 0.5em;
+  }
+  .primary-skills {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    row-gap: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  .skill-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

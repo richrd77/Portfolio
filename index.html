@@ -45,9 +45,44 @@
       </ul>
     </nav>
     <div class="container">
-      <div class="home main">Home Page</div>
+      <div class="home main">
+        <div>
+          <div class="home-di" data-legend="Test">HHHHH</div>
+        </div>
+      </div>
       <div class="skills main main-tile-fadeout">
-        <canvas id="myChart" style="height: 400px; width: 400px"></canvas>
+        <div class="skill-container">
+          <div class="primary-skills">
+            <div class="primary-skill">
+              <span class="skill-legend">C#</span>
+              <canvas
+                class="skill-circle"
+                id="cs"
+                style="height: 100%; width: 100%"
+              ></canvas>
+            </div>
+            <div class="primary-skill">
+              <span class="skill-legend">HTML</span>
+              <canvas id="htm" style="height: 100%; width: 100%"></canvas>
+            </div>
+            <div class="primary-skill">
+              <span class="skill-legend">JavaScript</span>
+              <canvas id="js" style="height: 100%; width: 100%"></canvas>
+            </div>
+            <div class="primary-skill">
+              <span class="skill-legend">.NET</span>
+              <canvas id="dotnet" style="height: 100%; width: 100%"></canvas>
+            </div>
+            <div class="primary-skill">
+              <span class="skill-legend">.NET Core</span>
+              <canvas id="dotnetcore" style="height: 100%; width: 100%"></canvas>
+            </div>
+          </div>
+          <div>
+            Secondary
+            Skills
+          </div>
+        </div>
       </div>
       <div class="services main main-tile-fadeout">Services Offered</div>
       <div class="contact main main-tile-fadeout">Contact Me</div>
@@ -126,7 +161,7 @@
 
         ctx.beginPath();
         ctx.arc(
-          rad / 2,
+          rad,
           rad / 2,
           rad / 2.5,
           0,
@@ -143,7 +178,7 @@
 
         ctx.beginPath();
         ctx.arc(
-          rad / 2,
+          rad,
           rad / 2,
           rad / 2.5,
           ((2 * percentage) / 100) * Math.PI,
@@ -153,11 +188,15 @@
         ctx.stroke();
 
         ctx.font = "1em Arial";
-        ctx.fillText(`${percentage}%`, rad / 2.5, rad / 2);
+        ctx.fillText(`${percentage}%`, rad / 1.2, rad / 1.8);
       }
 
       function LoadSkills() {
-        DrawCircle(document.getElementById("myChart"),40);
+        DrawCircle(document.getElementById("cs"), 70);
+        DrawCircle(document.getElementById("js"), 70);
+        DrawCircle(document.getElementById("htm"), 60);
+        DrawCircle(document.getElementById("dotnet"), 75);
+        DrawCircle(document.getElementById("dotnetcore"), 70);
       }
     </script>
   </body>

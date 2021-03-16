@@ -109,12 +109,54 @@ body {
   animation: fade-out 0.5s ease-in-out 0s 1;
 }
 
-.circle {
-  border: 0.25em solid var(--bg-color);
-  display: inline-block;
-  margin: 1em;
-  height: 10em;
-  width: 10em;
+.skills {
+  background-color: lightgrey;
+}
+
+.skill-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.skill-container > div {
+  flex: 1;
+}
+
+.primary-skills {
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  grid-template-rows: 190px 190px 190px;
+  column-gap: 5px;
+  row-gap: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.primary-skill {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: var(--color);
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.skill-circle {
+  height: 100%;
+  width: 100%;
+}
+
+.skill-legend {
+  //bottom: 0;
+}
+
+.secondary-skills {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -173,6 +215,25 @@ body {
     opacity: 1;
     pointer-events: all;
     z-index: 1;
+  }
+
+  .main {
+    padding: 0.5em;
+  }
+
+  .primary-skills {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .skill-container {
+    flex-direction: column;
   }
 }
 
