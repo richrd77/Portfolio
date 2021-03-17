@@ -101,7 +101,7 @@ body {
 }
 
 .main-tile-fadein {
-  display: block;
+  display: table;
   animation: fade-in 0.5s ease-in-out 0s 1;
 }
 
@@ -110,7 +110,6 @@ body {
 }
 
 .skills {
-  background-color: lightgrey;
 }
 
 .skill-container {
@@ -127,7 +126,7 @@ body {
 .primary-skills {
   display: grid;
   grid-template-columns: 220px 220px 220px;
-  grid-template-rows: 190px 190px 190px;
+  grid-template-rows: 190px 190px;
   column-gap: 5px;
   row-gap: 5px;
   width: 100%;
@@ -143,6 +142,13 @@ body {
   border-radius: 5px;
   text-align: center;
   align-items: center;
+  border: 0.03em solid lightgrey;
+  cursor: pointer;
+}
+
+.primary-skill:hover {
+  box-shadow: 0 0 0.5em 0.02em #aeadad;
+  transform: scale(1.01);
 }
 
 .skill-circle {
@@ -151,7 +157,7 @@ body {
 }
 
 .skill-legend {
-  //bottom: 0;
+  user-select: none;
 }
 
 .secondary-skills {
@@ -159,7 +165,7 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .hamburger-menu {
     width: 2rem;
     height: 2rem;
@@ -222,14 +228,8 @@ body {
   }
 
   .primary-skills {
-    display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    column-gap: 5px;
-    row-gap: 5px;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
   }
 
   .skill-container {

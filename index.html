@@ -74,8 +74,12 @@
               <canvas id="dotnet" style="height: 100%; width: 100%"></canvas>
             </div>
             <div class="primary-skill">
-              <span class="skill-legend">.NET Core</span>
-              <canvas id="dotnetcore" style="height: 100%; width: 100%"></canvas>
+              <span class="skill-legend">Angular</span>
+              <canvas id="angular" style="height: 100%; width: 100%"></canvas>
+            </div>
+            <div class="primary-skill">
+              <span class="skill-legend">Css</span>
+              <canvas id="css" style="height: 100%; width: 100%"></canvas>
             </div>
           </div>
           <div>
@@ -152,10 +156,6 @@
         const width = canvas.width;
         const lw = 2;
         const rad = height > width ? width : height;
-        console.log(height);
-        console.log(width);
-        console.log(rad);
-
         let ctx = canvas.getContext("2d");
         ctx.lineWidth = lw;
 
@@ -192,11 +192,24 @@
       }
 
       function LoadSkills() {
-        DrawCircle(document.getElementById("cs"), 70);
-        DrawCircle(document.getElementById("js"), 70);
-        DrawCircle(document.getElementById("htm"), 60);
-        DrawCircle(document.getElementById("dotnet"), 75);
-        DrawCircle(document.getElementById("dotnetcore"), 70);
+        setTimeout(() => {
+          DrawCircle(document.getElementById("cs"), 90);
+        }, 250);
+        setTimeout(() => {
+          DrawCircle(document.getElementById("js"), 90);
+        }, 350);
+        setTimeout(() => {
+          DrawCircle(document.getElementById("htm"), 75);
+        }, 450);
+        setTimeout(() => {
+          DrawCircle(document.getElementById("dotnet"), 80);
+        }, 550);
+        setTimeout(() => {
+          DrawCircle(document.getElementById("angular"), 80);
+        }, 650);
+        setTimeout(() => {
+          DrawCircle(document.getElementById("css"), 70);
+        }, 750);
       }
     </script>
   </body>

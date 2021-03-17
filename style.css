@@ -129,7 +129,7 @@ body {
 }
 
 .main-tile-fadein {
-  display: block;
+  display: table;
   -webkit-animation: fade-in 0.5s ease-in-out 0s 1;
           animation: fade-in 0.5s ease-in-out 0s 1;
 }
@@ -137,10 +137,6 @@ body {
 .main-tile-fadeout {
   -webkit-animation: fade-out 0.5s ease-in-out 0s 1;
           animation: fade-out 0.5s ease-in-out 0s 1;
-}
-
-.skills {
-  background-color: lightgrey;
 }
 
 .skill-container {
@@ -163,8 +159,8 @@ body {
   display: grid;
   -ms-grid-columns: 220px 220px 220px;
       grid-template-columns: 220px 220px 220px;
-  -ms-grid-rows: 190px 190px 190px;
-      grid-template-rows: 190px 190px 190px;
+  -ms-grid-rows: 190px 190px;
+      grid-template-rows: 190px 190px;
   -webkit-column-gap: 5px;
           column-gap: 5px;
   row-gap: 5px;
@@ -188,6 +184,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 0.03em solid lightgrey;
+  cursor: pointer;
+}
+
+.primary-skill:hover {
+  -webkit-box-shadow: 0 0 0.5em 0.02em #aeadad;
+          box-shadow: 0 0 0.5em 0.02em #aeadad;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .skill-circle {
@@ -195,12 +200,19 @@ body {
   width: 100%;
 }
 
+.skill-legend {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .secondary-skills {
   width: 100%;
   height: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .hamburger-menu {
     width: 2rem;
     height: 2rem;
@@ -271,18 +283,10 @@ body {
     padding: 0.5em;
   }
   .primary-skills {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
-    row-gap: 5px;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
   }
   .skill-container {
     -webkit-box-orient: vertical;
