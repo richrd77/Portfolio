@@ -82,9 +82,8 @@
               <canvas id="css" style="height: 100%; width: 100%"></canvas>
             </div>
           </div>
-          <div>
-            Secondary
-            Skills
+          <div class="exp-container">
+            <span class="exp" id="exp"></span>
           </div>
         </div>
       </div>
@@ -123,7 +122,6 @@
         i.addEventListener("click", (e) => {
           const currentLI = e.currentTarget;
           ShowTiles(currentLI.innerText.toLowerCase());
-          // currentLI.classList.toggle('active');
           if (
             currentLI.parentNode.previousElementSibling.classList.contains(
               "menu-open"
@@ -143,6 +141,10 @@
           case "skills":
             LoadSkills();
             break;
+
+          default:
+            ClearSkills();
+            break;
         }
       }
 
@@ -160,13 +162,7 @@
         ctx.lineWidth = lw;
 
         ctx.beginPath();
-        ctx.arc(
-          rad,
-          rad / 2,
-          rad / 2.5,
-          0,
-          ((2 * percentage) / 100) * Math.PI
-        );
+        ctx.arc(rad, rad / 2, rad / 2.5, 0, ((2 * percentage) / 100) * Math.PI);
         let gradient = ctx.createLinearGradient(0, 0, 170, 0);
         gradient.addColorStop("0", "magenta");
         gradient.addColorStop("0.5", "blue");
@@ -191,6 +187,11 @@
         ctx.fillText(`${percentage}%`, rad / 1.2, rad / 1.8);
       }
 
+      function ClearCanvas(element) {
+        const cnt = element.getContext("2d");
+        cnt.clearRect(0, 0, element.width, element.height)
+      }
+
       function LoadSkills() {
         setTimeout(() => {
           DrawCircle(document.getElementById("cs"), 90);
@@ -210,6 +211,28 @@
         setTimeout(() => {
           DrawCircle(document.getElementById("css"), 70);
         }, 750);
+        LoadExpe();
+      }
+
+      function LoadExpe() {
+        document.getElementById(
+          "exp"
+        ).innerHTML = `I have been in the industry for ${
+          new Date().getFullYear() - 2013
+        } Years and worked on many projects both professionally and personally, i have worked on wide range of projects (more detals can be seen under "services" section).${" "}I am also part time teacher, i teach all the technical skills mentioned.`;
+        setTimeout(() => {
+          document.getElementsByClassName("exp-container")[0].style.opacity = 1;
+        }, 800);
+      }
+
+      function ClearSkills() {
+        ClearCanvas(document.getElementById("cs"));
+        ClearCanvas(document.getElementById("js"));
+        ClearCanvas(document.getElementById("htm"));
+        ClearCanvas(document.getElementById("dotnet"));
+        ClearCanvas(document.getElementById("angular"));
+        ClearCanvas(document.getElementById("css"));
+        document.getElementsByClassName("exp-container")[0].style.opacity = 0;
       }
     </script>
   </body>

@@ -162,6 +162,12 @@ body {
   height: 100%;
 }
 
+.exp-container {
+  padding: 1em;
+  user-select: none;
+  opacity: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .hamburger-menu {
     width: 2rem;
