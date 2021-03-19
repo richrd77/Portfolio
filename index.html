@@ -53,13 +53,20 @@
       <div class="skills main main-tile-fadeout">
         <div class="skill-container">
           <div class="primary-skills">
-            <div class="primary-skill">
-              <span class="skill-legend">C#</span>
-              <canvas
-                class="skill-circle"
-                id="cs"
-                style="height: 100%; width: 100%"
-              ></canvas>
+            <div class="primary-skill flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front circle-container">
+                  <span class="skill-legend">C#</span>
+                  <canvas class="skill-circle" id="cs" style="height: 100%; width: 100%" ></canvas>
+                </div>
+                <div class="flip-card-back" style="border-color: transparent;">
+                  <table class="details-tbl" border="1">
+                    <tr><td>OOP</td><td>80%</td></tr>
+                    <tr><td>Threading</td><td>60%</td></tr>
+                    <tr><td>Design Patterns</td><td>70%</td></tr>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="primary-skill">
               <span class="skill-legend">HTML</span>
@@ -111,6 +118,12 @@
     <script>
       document.querySelector(".home").classList.toggle("main-tile-fadein");
       document.querySelector(".home").classList.toggle("active");
+
+      document.querySelectorAll(".flip-card-inner").forEach((c) => {
+        c.addEventListener("click", (e) => {
+          e.currentTarget.classList.toggle("flip-the-card");
+        });
+      });
 
       document
         .querySelector(".hamburger-menu")
@@ -189,7 +202,7 @@
 
       function ClearCanvas(element) {
         const cnt = element.getContext("2d");
-        cnt.clearRect(0, 0, element.width, element.height)
+        cnt.clearRect(0, 0, element.width, element.height);
       }
 
       function LoadSkills() {
@@ -221,7 +234,9 @@
           new Date().getFullYear() - 2013
         } Years and worked on many projects both professionally and personally, i have worked on wide range of projects (more detals can be seen under "services" section).${" "}I am also part time teacher, i teach all the technical skills mentioned.`;
         setTimeout(() => {
-          document.getElementsByClassName("exp-container")[0].classList.add('show-animation');
+          document
+            .getElementsByClassName("exp-container")[0]
+            .classList.add("show-animation");
         }, 800);
       }
 
@@ -232,7 +247,9 @@
         ClearCanvas(document.getElementById("dotnet"));
         ClearCanvas(document.getElementById("angular"));
         ClearCanvas(document.getElementById("css"));
-        document.getElementsByClassName("exp-container")[0].classList.remove('show-animation');
+        document
+          .getElementsByClassName("exp-container")[0]
+          .classList.remove("show-animation");
       }
     </script>
   </body>
