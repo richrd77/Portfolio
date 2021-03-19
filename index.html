@@ -221,7 +221,7 @@
           new Date().getFullYear() - 2013
         } Years and worked on many projects both professionally and personally, i have worked on wide range of projects (more detals can be seen under "services" section).${" "}I am also part time teacher, i teach all the technical skills mentioned.`;
         setTimeout(() => {
-          document.getElementsByClassName("exp-container")[0].style.opacity = 1;
+          document.getElementsByClassName("exp-container")[0].classList.add('show-animation');
         }, 800);
       }
 
@@ -232,7 +232,7 @@
         ClearCanvas(document.getElementById("dotnet"));
         ClearCanvas(document.getElementById("angular"));
         ClearCanvas(document.getElementById("css"));
-        document.getElementsByClassName("exp-container")[0].style.opacity = 0;
+        document.getElementsByClassName("exp-container")[0].classList.remove('show-animation');
       }
     </script>
   </body>
