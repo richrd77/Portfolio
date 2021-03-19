@@ -57,13 +57,26 @@
               <div class="flip-card-inner">
                 <div class="flip-card-front circle-container">
                   <span class="skill-legend">C#</span>
-                  <canvas class="skill-circle" id="cs" style="height: 100%; width: 100%" ></canvas>
+                  <canvas
+                    class="skill-circle"
+                    id="cs"
+                    style="height: 100%; width: 100%"
+                  ></canvas>
                 </div>
-                <div class="flip-card-back" style="border-color: transparent;">
+                <div class="flip-card-back" style="border-color: transparent">
                   <table class="details-tbl" border="1">
-                    <tr><td>OOP</td><td>80%</td></tr>
-                    <tr><td>Threading</td><td>60%</td></tr>
-                    <tr><td>Design Patterns</td><td>70%</td></tr>
+                    <tr>
+                      <td>OOP</td>
+                      <td>80%</td>
+                    </tr>
+                    <tr>
+                      <td>Threading</td>
+                      <td>60%</td>
+                    </tr>
+                    <tr>
+                      <td>Design Patterns</td>
+                      <td>70%</td>
+                    </tr>
                   </table>
                 </div>
               </div>
@@ -94,7 +107,38 @@
           </div>
         </div>
       </div>
-      <div class="services main main-tile-fadeout">Services Offered</div>
+      <div class="services main main-tile-fadeout">
+        <div class="skill-container">
+          <div class="primary-skills">
+            <div class="primary-skill flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front circle-container">api</div>
+                <div class="flip-card-back" style="border-color: transparent">
+                  <table class="details-tbl" border="1">
+                    <tr>
+                      <td>OOP</td>
+                      <td>80%</td>
+                    </tr>
+                    <tr>
+                      <td>Threading</td>
+                      <td>60%</td>
+                    </tr>
+                    <tr>
+                      <td>Design Patterns</td>
+                      <td>70%</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="primary-skill">Web</div>
+            <div class="primary-skill">Mobile Development</div>
+          </div>
+          <div>
+            <span>Samples</span>
+          </div>
+        </div>
+      </div>
       <div class="contact main main-tile-fadeout">Contact Me</div>
     </div>
     <footer class="footer no-ui">
@@ -250,6 +294,9 @@
         document
           .getElementsByClassName("exp-container")[0]
           .classList.remove("show-animation");
+        document.querySelectorAll(".flip-the-card").forEach((c) => {
+          c.classList.toggle("flip-the-card");
+        });
       }
     </script>
   </body>
