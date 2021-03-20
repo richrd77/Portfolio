@@ -378,10 +378,13 @@ td + td {
     padding: 0.5em;
   }
   .primary-skills {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    -ms-grid-columns: 220px;
+        grid-template-columns: 220px;
+    -ms-grid-rows: 190px;
+        grid-template-rows: 190px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .skill-container {
     -webkit-box-orient: vertical;

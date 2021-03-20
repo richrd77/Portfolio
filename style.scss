@@ -309,8 +309,9 @@ td + td {
   }
 
   .primary-skills {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: 220px;
+    grid-template-rows: 190px;
+    justify-content: center;
   }
 
   .skill-container {
