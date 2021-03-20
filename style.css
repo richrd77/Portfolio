@@ -377,6 +377,27 @@ td + td {
   .main {
     padding: 0.5em;
   }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .primary-skills {
+    -ms-grid-columns: 220px 220px;
+        grid-template-columns: 220px 220px;
+    -ms-grid-rows: 190px;
+        grid-template-rows: 190px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skill-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .primary-skills {
     -ms-grid-columns: 220px;
         grid-template-columns: 220px;
@@ -387,6 +408,12 @@ td + td {
             justify-content: center;
   }
   .skill-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

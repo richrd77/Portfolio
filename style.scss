@@ -246,7 +246,8 @@ td + td {
   border-left: 1px solid var(--border-color);
 }
 
-@media screen and (max-width: 1000px) {
+// small screen's common styles
+@media screen and (max-width:1000px) {
   .hamburger-menu {
     width: 2rem;
     height: 2rem;
@@ -307,7 +308,23 @@ td + td {
   .main {
     padding: 0.5em;
   }
+}
 
+// tablet styles
+@media screen and (min-width: 500px) and  (max-width: 1000px) {
+  .primary-skills {
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 190px;
+    justify-content: center;
+  }
+
+  .skill-container {
+    flex-direction: column;
+  }
+}
+
+// mobile screens
+@media screen and (max-width: 500px) {
   .primary-skills {
     grid-template-columns: 220px;
     grid-template-rows: 190px;
@@ -315,6 +332,10 @@ td + td {
   }
 
   .skill-container {
+    flex-direction: column;
+  }
+
+  .footer {
     flex-direction: column;
   }
 }
