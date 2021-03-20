@@ -246,8 +246,39 @@ td + td {
   border-left: 1px solid var(--border-color);
 }
 
+.services-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: 220px 220px;
+  grid-template-rows: 190px;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.services-section {
+  opacity: 0;
+  transition: opacity 0.05s ease-in-out;
+}
+
+.product {
+  border-radius: 5px;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-services {
+  animation: show-animae 1.5s ease-in-out 0s 1 forwards;
+}
+
 // small screen's common styles
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
   .hamburger-menu {
     width: 2rem;
     height: 2rem;
@@ -308,10 +339,27 @@ td + td {
   .main {
     padding: 0.5em;
   }
+
+  .services-wrapper {
+    flex-direction: column;
+  }
+
+  .services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 0;
+  }
+
+  .products-wrapper {
+    grid-template-columns: 220px;
+    grid-template-rows: 190px;
+  }
 }
 
 // tablet styles
-@media screen and (min-width: 500px) and  (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 1000px) {
   .primary-skills {
     grid-template-columns: 220px 220px;
     grid-template-rows: 190px;
@@ -320,6 +368,11 @@ td + td {
 
   .skill-container {
     flex-direction: column;
+  }
+
+  .products-wrapper {
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 190px;
   }
 }
 

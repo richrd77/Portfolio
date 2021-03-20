@@ -307,6 +307,53 @@ td + td {
   border-left: 1px solid var(--border-color);
 }
 
+.services-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.products-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 220px 220px;
+      grid-template-columns: 220px 220px;
+  -ms-grid-rows: 190px;
+      grid-template-rows: 190px;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  row-gap: 5px;
+}
+
+.services-section {
+  opacity: 0;
+  -webkit-transition: opacity 0.05s ease-in-out;
+  transition: opacity 0.05s ease-in-out;
+}
+
+.product {
+  border-radius: 5px;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.show-services {
+  -webkit-animation: show-animae 1.5s ease-in-out 0s 1 forwards;
+          animation: show-animae 1.5s ease-in-out 0s 1 forwards;
+}
+
 @media screen and (max-width: 1000px) {
   .hamburger-menu {
     width: 2rem;
@@ -377,6 +424,34 @@ td + td {
   .main {
     padding: 0.5em;
   }
+  .services-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.5em 0;
+  }
+  .products-wrapper {
+    -ms-grid-columns: 220px;
+        grid-template-columns: 220px;
+    -ms-grid-rows: 190px;
+        grid-template-rows: 190px;
+  }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
@@ -394,6 +469,12 @@ td + td {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .products-wrapper {
+    -ms-grid-columns: 220px 220px;
+        grid-template-columns: 220px 220px;
+    -ms-grid-rows: 190px;
+        grid-template-rows: 190px;
   }
 }
 
