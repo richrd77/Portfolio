@@ -90,6 +90,7 @@ body {
   overflow: auto;
   position: relative;
   font-family: "Redressed", cursive;
+  background-color: var(--color);
 }
 
 .main {
@@ -99,8 +100,8 @@ body {
   display: none;
   padding: 1em;
   font-size: 2em;
-  background-color: var(--color);
   color: var(--bg-color);
+  background-color: transparent;
 }
 
 .main-tile-fadein {
@@ -136,7 +137,6 @@ body {
 
 .primary-skill {
   position: relative;
-  background-color: var(--color);
   text-align: center;
   align-items: center;
   cursor: pointer;
@@ -271,6 +271,7 @@ td + td {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 }
 
 .show-services {
