@@ -269,7 +269,10 @@
                       </g>
                     </svg>
                   </div>
-                  <div class="flip-card-back product-card-back">I can create a website (single/Multiple Page) in various languages as per your business needs</div>
+                  <div class="flip-card-back product-card-back">
+                    I can create a website (single/Multiple Page) in various
+                    languages as per your business needs
+                  </div>
                 </div>
               </div>
               <div class="product flip-card">
@@ -444,7 +447,10 @@
                       </g>
                     </svg>
                   </div>
-                  <div class="flip-card-back product-card-back">I can create/consume api's (google apis, facebook apis, payments apis)</div>
+                  <div class="flip-card-back product-card-back">
+                    I can create/consume api's (google apis, facebook apis,
+                    payments apis)
+                  </div>
                 </div>
               </div>
               <div class="product flip-card">
@@ -465,7 +471,9 @@
                       />
                     </svg>
                   </div>
-                  <div class="flip-card-back product-card-back">I can make mobile apps for android & iOS</div>
+                  <div class="flip-card-back product-card-back">
+                    I can make mobile apps for android & iOS
+                  </div>
                 </div>
               </div>
               <div class="product flip-card">
@@ -496,7 +504,10 @@
                       </g>
                     </svg>
                   </div>
-                  <div class="flip-card-back product-card-back">I can make any kind of automation, be it in your local computer or in the server</div>
+                  <div class="flip-card-back product-card-back">
+                    I can make any kind of automation, be it in your local
+                    computer or in the server
+                  </div>
                 </div>
               </div>
             </div>
@@ -811,6 +822,7 @@
 
           case "services":
             LoadServices();
+            ClearSkills();
             break;
 
           default:
@@ -920,14 +932,29 @@
       }
 
       function LoadServices() {
-        // document.querySelectorAll(".services-section").forEach((s) => {
-        //   setTimeout(() => {
-        //     s.style.opacity=1;
-        //   }, 500);
-        // });
+        document
+          .querySelectorAll(
+            ".product > .flip-card-inner > .flip-card-front > svg"
+          )
+          .forEach((s, i) => {
+            setTimeout(() => {
+              s.style.opacity = 1;
+            }, 520 + 100 * i);
+          });
       }
 
-      function ClearServices() {}
+      function ClearServices() {
+        document.querySelectorAll("flip-the-card").forEach((c) => {
+          c.classList.remove("flip-the-card");
+        });
+        document
+          .querySelectorAll(
+            ".product > .flip-card-inner > .flip-card-front > svg"
+          )
+          .forEach((s, i) => {
+            s.style.opacity = 0;
+          });
+      }
     </script>
   </body>
 </html>

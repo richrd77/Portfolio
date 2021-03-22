@@ -194,6 +194,11 @@ body {
   transform: rotateY(180deg);
 }
 
+svg {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
 .flip-card-front,
 .flip-card-back {
   border: var(--border-width) solid var(--border-color);
