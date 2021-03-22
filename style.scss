@@ -254,7 +254,7 @@ td + td {
 .products-wrapper {
   display: grid;
   grid-template-columns: 220px 220px;
-  grid-template-rows: 190px;
+  grid-template-rows: 190px 190px;
   column-gap: 5px;
   row-gap: 5px;
 }
@@ -265,13 +265,21 @@ td + td {
 }
 
 .product {
-  border-radius: 5px;
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--border-radius);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  cursor: pointer;
+}
+
+.product-card-front {
+  padding: 0.9em;
+}
+
+.product-card-back {
+  font-size: 0.65em;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em;
 }
 
 .show-services {
@@ -279,7 +287,7 @@ td + td {
 }
 
 // small screen's common styles
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   .hamburger-menu {
     width: 2rem;
     height: 2rem;
@@ -352,15 +360,10 @@ td + td {
     justify-content: center;
     padding: 0.5em 0;
   }
-
-  .products-wrapper {
-    grid-template-columns: 220px;
-    grid-template-rows: 190px;
-  }
 }
 
 // tablet styles
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 1050px) {
   .primary-skills {
     grid-template-columns: 220px 220px;
     grid-template-rows: 190px 190px 190px;
@@ -373,7 +376,7 @@ td + td {
 
   .products-wrapper {
     grid-template-columns: 220px 220px;
-    grid-template-rows: 190px;
+    grid-template-rows: 190px 190px;
   }
 }
 
@@ -391,6 +394,11 @@ td + td {
 
   .footer {
     flex-direction: column;
+  }
+
+  .products-wrapper {
+    grid-template-columns: 220px;
+    grid-template-rows: 190px 190px 190px 190px;
   }
 }
 

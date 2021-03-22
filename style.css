@@ -321,8 +321,8 @@ td + td {
   display: grid;
   -ms-grid-columns: 220px 220px;
       grid-template-columns: 220px 220px;
-  -ms-grid-rows: 190px;
-      grid-template-rows: 190px;
+  -ms-grid-rows: 190px 190px;
+      grid-template-rows: 190px 190px;
   -webkit-column-gap: 5px;
           column-gap: 5px;
   row-gap: 5px;
@@ -335,9 +335,6 @@ td + td {
 }
 
 .product {
-  border-radius: 5px;
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--border-radius);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,7 +344,22 @@ td + td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em;
+  cursor: pointer;
+}
+
+.product-card-front {
+  padding: 0.9em;
+}
+
+.product-card-back {
+  font-size: 0.65em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0.5em;
 }
 
 .show-services {
@@ -355,7 +367,7 @@ td + td {
           animation: show-animae 1.5s ease-in-out 0s 1 forwards;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   .hamburger-menu {
     width: 2rem;
     height: 2rem;
@@ -447,15 +459,9 @@ td + td {
             justify-content: center;
     padding: 0.5em 0;
   }
-  .products-wrapper {
-    -ms-grid-columns: 220px;
-        grid-template-columns: 220px;
-    -ms-grid-rows: 190px;
-        grid-template-rows: 190px;
-  }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 1050px) {
   .primary-skills {
     -ms-grid-columns: 220px 220px;
         grid-template-columns: 220px 220px;
@@ -474,8 +480,8 @@ td + td {
   .products-wrapper {
     -ms-grid-columns: 220px 220px;
         grid-template-columns: 220px 220px;
-    -ms-grid-rows: 190px;
-        grid-template-rows: 190px;
+    -ms-grid-rows: 190px 190px;
+        grid-template-rows: 190px 190px;
   }
 }
 
@@ -500,6 +506,12 @@ td + td {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .products-wrapper {
+    -ms-grid-columns: 220px;
+        grid-template-columns: 220px;
+    -ms-grid-rows: 190px 190px 190px 190px;
+        grid-template-rows: 190px 190px 190px 190px;
   }
 }
 
