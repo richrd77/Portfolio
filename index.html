@@ -81,25 +81,149 @@
                 </div>
               </div>
             </div>
-            <div class="primary-skill">
-              <span class="skill-legend">HTML</span>
-              <canvas id="htm" style="height: 100%; width: 100%"></canvas>
+            <div class="primary-skill flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front circle-container">
+                  <span class="skill-legend">HTML</span>
+                  <canvas
+                    class="skill-circle"
+                    id="htm"
+                    style="height: 100%; width: 100%"
+                  ></canvas>
+                </div>
+                <div class="flip-card-back" style="border-color: transparent">
+                  <table class="details-tbl" border="1">
+                    <tr>
+                      <td>Classic HTML</td>
+                      <td>80%</td>
+                    </tr>
+                    <tr>
+                      <td>HTML 5.0</td>
+                      <td>80%</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="primary-skill">
-              <span class="skill-legend">JavaScript</span>
-              <canvas id="js" style="height: 100%; width: 100%"></canvas>
+            <div class="primary-skill flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front circle-container">
+                  <span class="skill-legend">JavaScript</span>
+                  <canvas
+                    class="skill-circle"
+                    id="js"
+                    style="height: 100%; width: 100%"
+                  ></canvas>
+                </div>
+                <div class="flip-card-back" style="border-color: transparent">
+                  <table class="details-tbl" border="1">
+                    <tr>
+                      <td>ES5 & ES6</td>
+                      <td>85%</td>
+                    </tr>
+                    <tr>
+                      <td>Promises</td>
+                      <td>90%</td>
+                    </tr>
+                    <tr>
+                      <td>Closures</td>
+                      <td>80%</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="primary-skill">
-              <span class="skill-legend">.NET</span>
-              <canvas id="dotnet" style="height: 100%; width: 100%"></canvas>
+            <div class="primary-skill flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front circle-container">
+                  <span class="skill-legend">.NET</span>
+                  <canvas
+                    class="skill-circle"
+                    id="dotnet"
+                    style="height: 100%; width: 100%"
+                  ></canvas>
+                </div>
+                <div class="flip-card-back" style="border-color: transparent">
+                  <table class="details-tbl" border="1">
+                    <tr>
+                      <td>Web app (MVC & non MVC)</td>
+                      <td>92%</td>
+                    </tr>
+                    <tr>
+                      <td>Web api (MVC & non MVC)</td>
+                      <td>94%</td>
+                    </tr>
+                    <tr>
+                      <td>dotnet Core</td>
+                      <td>80%</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="primary-skill">
-              <span class="skill-legend">Angular</span>
-              <canvas id="angular" style="height: 100%; width: 100%"></canvas>
+            <div class="primary-skill flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front circle-container">
+                  <span class="skill-legend">angular</span>
+                  <canvas
+                    class="skill-circle"
+                    id="angular"
+                    style="height: 100%; width: 100%"
+                  ></canvas>
+                </div>
+                <div class="flip-card-back" style="border-color: transparent">
+                  <table class="details-tbl" border="1">
+                    <tr>
+                      <td>Components</td>
+                      <td>92%</td>
+                    </tr>
+                    <tr>
+                      <td>Directives</td>
+                      <td>94%</td>
+                    </tr>
+                    <tr>
+                      <td>Pipes</td>
+                      <td>80%</td>
+                    </tr>
+                    <tr>
+                      <td>RXjs</td>
+                      <td>80%</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="primary-skill">
-              <span class="skill-legend">Css</span>
-              <canvas id="css" style="height: 100%; width: 100%"></canvas>
+            <div class="primary-skill flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front circle-container">
+                  <span class="skill-legend">CSS</span>
+                  <canvas
+                    class="skill-circle"
+                    id="css"
+                    style="height: 100%; width: 100%"
+                  ></canvas>
+                </div>
+                <div class="flip-card-back" style="border-color: transparent">
+                  <table class="details-tbl" border="1">
+                    <tr>
+                      <td>Classic CSS</td>
+                      <td>75%</td>
+                    </tr>
+                    <tr>
+                      <td>CSS3</td>
+                      <td>90%</td>
+                    </tr>
+                    <tr>
+                      <td>Scss</td>
+                      <td>80%</td>
+                    </tr>
+                    <tr>
+                      <td>Media Queries</td>
+                      <td>80%</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
           <div class="exp-container">
@@ -361,13 +485,27 @@
             <span>I can made the following products</span>
             <div class="products-wrapper">
               <div class="product">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 433.000000 426.000000">
-                  <g transform="translate(0.000000,426.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                  <path d="M2094 4170 c-5 -5 -57 -12 -114 -15 -300 -17 -689 -153 -965 -338 -98 -65 -113 -77 -225 -170 -89 -74 -161 -147 -239 -242 -68 -82 -178 -243 -206 -300 -11 -22 -25 -47 -31 -55 -16 -22 -114 -250 -114 -266 0 -7 -6 -28 -14 -46 -20 -46 -42 -134 -68 -268 -18 -98 -22 -150 -22 -355 0 -185 4 -257 17 -315 9 -41 21 -97 26 -125 18 -93 46 -188 77 -260 7 -16 22 -55 34 -85 79 -205 259 -470 435 -644 136 -134 341 -283 500 -364 136 -68 208 -102 219 -102 6 0 43 -13 81 -29 39 -15 88 -31 110 -35 22 -4 60 -14 85 -21 81 -26 193 -44 299 -49 57 -3 109 -10 115 -16 5 -5 23 -10 38 -10 l28 0 0 174 0 174 -97 5 c-323 14 -706 167 -978 388 -73 60 -195 175 -231 220 -74 91 -135 174 -169 231 -53 89 -77 134 -100 189 -14 35 -32 78 -40 94 -7 17 -23 64 -35 105 -12 41 -26 86 -31 100 -29 78 -52 370 -39 488 6 53 15 132 20 174 5 42 13 86 20 97 6 11 14 40 19 63 13 64 24 92 95 259 71 165 239 395 388 532 84 77 96 86 223 174 149 102 358 201 500 235 22 5 63 16 91 24 28 8 62 14 75 14 13 0 46 7 73 15 27 8 87 15 133 15 l83 0 0 175 0 175 -28 0 c-15 0 -32 -4 -38 -10z"/>
-                  <path d="M2360 3995 l0 -165 33 0 c17 0 57 -7 87 -15 30 -8 71 -15 90 -15 19 0 46 -7 60 -15 14 -8 39 -14 55 -15 17 0 43 -7 59 -15 15 -8 33 -15 40 -15 28 0 231 -92 346 -157 170 -96 413 -315 513 -461 75 -109 79 -107 -166 -110 l-207 -2 -62 59 c-86 81 -132 121 -140 121 -4 0 -22 13 -40 28 -18 16 -49 37 -68 47 -144 74 -235 116 -267 124 -21 5 -51 14 -68 20 -142 49 -350 69 -544 52 -147 -13 -200 -25 -361 -79 -196 -66 -354 -166 -512 -325 -108 -109 -158 -174 -218 -282 -78 -143 -108 -221 -147 -385 -26 -109 -25 -413 1 -525 53 -231 120 -378 246 -545 174 -229 434 -403 720 -483 30 -9 81 -23 113 -32 80 -23 492 -22 581 0 156 40 268 79 356 126 8 4 38 20 65 34 28 14 78 47 110 72 33 25 81 61 107 80 100 73 328 374 328 433 0 6 -67 10 -199 10 l-200 0 -98 -101 c-126 -130 -252 -213 -408 -272 -126 -46 -300 -65 -466 -50 -63 6 -134 16 -159 23 -68 19 -210 80 -250 106 -19 13 -38 24 -43 24 -10 0 -131 97 -177 142 -83 82 -220 290 -220 335 0 8 -6 24 -12 36 -23 40 -37 111 -26 125 8 10 253 12 1191 12 914 0 1182 2 1188 12 12 20 22 175 15 241 -19 183 -44 295 -92 411 -18 45 -21 62 -13 73 9 10 82 13 371 13 302 0 359 2 364 14 5 13 -8 55 -61 204 -6 18 -17 38 -23 44 -7 7 -12 17 -12 23 0 16 -92 185 -132 244 -167 244 -411 485 -616 606 -9 6 -28 18 -42 27 -39 26 -149 86 -210 114 -30 14 -67 32 -82 40 -14 8 -33 14 -42 14 -9 0 -33 9 -53 20 -21 11 -45 20 -55 20 -9 0 -19 4 -22 9 -3 4 -29 11 -58 15 -28 4 -60 12 -70 17 -18 10 -57 18 -173 38 -27 5 -89 12 -137 15 l-88 5 0 -164z m20 -890 c163 -27 282 -73 406 -157 72 -48 251 -225 294 -289 67 -102 145 -286 138 -330 l-3 -24 -996 -3 c-1109 -2 -1032 -7 -1008 65 35 111 114 276 158 331 112 142 236 245 376 311 138 64 171 74 319 91 44 6 81 12 84 15 10 10 148 4 232 -10z"/>
-                  <path d="M3886 1544 c-9 -8 -16 -22 -16 -30 0 -18 -80 -186 -128 -268 -120 -205 -387 -462 -617 -593 -64 -36 -224 -113 -250 -119 -16 -4 -39 -13 -50 -20 -11 -8 -27 -14 -36 -14 -9 0 -30 -7 -45 -15 -16 -8 -42 -15 -59 -15 -16 -1 -41 -7 -55 -15 -14 -8 -41 -15 -60 -15 -19 0 -60 -7 -90 -15 -30 -8 -70 -15 -87 -15 l-33 0 0 -165 0 -164 88 5 c113 7 260 33 327 58 22 8 49 15 60 16 23 1 110 30 142 48 12 7 29 12 38 12 9 0 29 6 43 14 15 8 59 29 97 46 336 152 704 484 890 802 20 35 40 70 45 78 20 32 64 128 100 215 29 70 53 154 47 168 -6 15 -26 17 -171 17 -136 0 -167 -3 -180 -16z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.0"
+                  viewBox="0 0 433.000000 426.000000"
+                >
+                  <g
+                    transform="translate(0.000000,426.000000) scale(0.100000,-0.100000)"
+                    fill="#000000"
+                    stroke="none"
+                  >
+                    <path
+                      d="M2094 4170 c-5 -5 -57 -12 -114 -15 -300 -17 -689 -153 -965 -338 -98 -65 -113 -77 -225 -170 -89 -74 -161 -147 -239 -242 -68 -82 -178 -243 -206 -300 -11 -22 -25 -47 -31 -55 -16 -22 -114 -250 -114 -266 0 -7 -6 -28 -14 -46 -20 -46 -42 -134 -68 -268 -18 -98 -22 -150 -22 -355 0 -185 4 -257 17 -315 9 -41 21 -97 26 -125 18 -93 46 -188 77 -260 7 -16 22 -55 34 -85 79 -205 259 -470 435 -644 136 -134 341 -283 500 -364 136 -68 208 -102 219 -102 6 0 43 -13 81 -29 39 -15 88 -31 110 -35 22 -4 60 -14 85 -21 81 -26 193 -44 299 -49 57 -3 109 -10 115 -16 5 -5 23 -10 38 -10 l28 0 0 174 0 174 -97 5 c-323 14 -706 167 -978 388 -73 60 -195 175 -231 220 -74 91 -135 174 -169 231 -53 89 -77 134 -100 189 -14 35 -32 78 -40 94 -7 17 -23 64 -35 105 -12 41 -26 86 -31 100 -29 78 -52 370 -39 488 6 53 15 132 20 174 5 42 13 86 20 97 6 11 14 40 19 63 13 64 24 92 95 259 71 165 239 395 388 532 84 77 96 86 223 174 149 102 358 201 500 235 22 5 63 16 91 24 28 8 62 14 75 14 13 0 46 7 73 15 27 8 87 15 133 15 l83 0 0 175 0 175 -28 0 c-15 0 -32 -4 -38 -10z"
+                    />
+                    <path
+                      d="M2360 3995 l0 -165 33 0 c17 0 57 -7 87 -15 30 -8 71 -15 90 -15 19 0 46 -7 60 -15 14 -8 39 -14 55 -15 17 0 43 -7 59 -15 15 -8 33 -15 40 -15 28 0 231 -92 346 -157 170 -96 413 -315 513 -461 75 -109 79 -107 -166 -110 l-207 -2 -62 59 c-86 81 -132 121 -140 121 -4 0 -22 13 -40 28 -18 16 -49 37 -68 47 -144 74 -235 116 -267 124 -21 5 -51 14 -68 20 -142 49 -350 69 -544 52 -147 -13 -200 -25 -361 -79 -196 -66 -354 -166 -512 -325 -108 -109 -158 -174 -218 -282 -78 -143 -108 -221 -147 -385 -26 -109 -25 -413 1 -525 53 -231 120 -378 246 -545 174 -229 434 -403 720 -483 30 -9 81 -23 113 -32 80 -23 492 -22 581 0 156 40 268 79 356 126 8 4 38 20 65 34 28 14 78 47 110 72 33 25 81 61 107 80 100 73 328 374 328 433 0 6 -67 10 -199 10 l-200 0 -98 -101 c-126 -130 -252 -213 -408 -272 -126 -46 -300 -65 -466 -50 -63 6 -134 16 -159 23 -68 19 -210 80 -250 106 -19 13 -38 24 -43 24 -10 0 -131 97 -177 142 -83 82 -220 290 -220 335 0 8 -6 24 -12 36 -23 40 -37 111 -26 125 8 10 253 12 1191 12 914 0 1182 2 1188 12 12 20 22 175 15 241 -19 183 -44 295 -92 411 -18 45 -21 62 -13 73 9 10 82 13 371 13 302 0 359 2 364 14 5 13 -8 55 -61 204 -6 18 -17 38 -23 44 -7 7 -12 17 -12 23 0 16 -92 185 -132 244 -167 244 -411 485 -616 606 -9 6 -28 18 -42 27 -39 26 -149 86 -210 114 -30 14 -67 32 -82 40 -14 8 -33 14 -42 14 -9 0 -33 9 -53 20 -21 11 -45 20 -55 20 -9 0 -19 4 -22 9 -3 4 -29 11 -58 15 -28 4 -60 12 -70 17 -18 10 -57 18 -173 38 -27 5 -89 12 -137 15 l-88 5 0 -164z m20 -890 c163 -27 282 -73 406 -157 72 -48 251 -225 294 -289 67 -102 145 -286 138 -330 l-3 -24 -996 -3 c-1109 -2 -1032 -7 -1008 65 35 111 114 276 158 331 112 142 236 245 376 311 138 64 171 74 319 91 44 6 81 12 84 15 10 10 148 4 232 -10z"
+                    />
+                    <path
+                      d="M3886 1544 c-9 -8 -16 -22 -16 -30 0 -18 -80 -186 -128 -268 -120 -205 -387 -462 -617 -593 -64 -36 -224 -113 -250 -119 -16 -4 -39 -13 -50 -20 -11 -8 -27 -14 -36 -14 -9 0 -30 -7 -45 -15 -16 -8 -42 -15 -59 -15 -16 -1 -41 -7 -55 -15 -14 -8 -41 -15 -60 -15 -19 0 -60 -7 -90 -15 -30 -8 -70 -15 -87 -15 l-33 0 0 -165 0 -164 88 5 c113 7 260 33 327 58 22 8 49 15 60 16 23 1 110 30 142 48 12 7 29 12 38 12 9 0 29 6 43 14 15 8 59 29 97 46 336 152 704 484 890 802 20 35 40 70 45 78 20 32 64 128 100 215 29 70 53 154 47 168 -6 15 -26 17 -171 17 -136 0 -167 -3 -180 -16z"
+                    />
                   </g>
-                  </svg>
+                </svg>
               </div>
               <div class="product" style="padding: 0">
                 <svg
@@ -599,8 +737,9 @@
           onclick="window.open('https://www.facebook.com/richardphynmen.p','_blank')"
         ></i>
         <i
-        class="fab fa-linkedin-in clickable social"
-        onclick="window.open('https://www.linkedin.com/in/richrd77','_blank')"></i>
+          class="fab fa-linkedin-in clickable social"
+          onclick="window.open('https://www.linkedin.com/in/richrd77','_blank')"
+        ></i>
         <i
           class="fab fa-instagram-square clickable social"
           onclick="window.open('https://www.instagram.com/honestcoder','_blank')"
@@ -693,8 +832,11 @@
           ((2 * percentage) / 100) * Math.PI,
           2 * Math.PI
         );
-        ctx.strokeStyle = window.getComputedStyle(document.querySelector('.container')).backgroundColor
-          ? window.getComputedStyle(document.querySelector('.container')).backgroundColor
+        ctx.strokeStyle = window.getComputedStyle(
+          document.querySelector(".container")
+        ).backgroundColor
+          ? window.getComputedStyle(document.querySelector(".container"))
+              .backgroundColor
           : "lightgrey";
         ctx.stroke();
 

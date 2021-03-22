@@ -363,7 +363,7 @@ td + td {
 @media screen and (min-width: 500px) and (max-width: 1000px) {
   .primary-skills {
     grid-template-columns: 220px 220px;
-    grid-template-rows: 190px;
+    grid-template-rows: 190px 190px 190px;
     justify-content: center;
   }
 
@@ -381,7 +381,7 @@ td + td {
 @media screen and (max-width: 500px) {
   .primary-skills {
     grid-template-columns: 220px;
-    grid-template-rows: 190px;
+    grid-template-rows: 190px 190px 190px 190px 190px 190px;
     justify-content: center;
   }
 
