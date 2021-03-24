@@ -640,7 +640,7 @@
       <div class="contact main main-tile-fadeout">
         <div class="contact-wrapper">
           <form class="contact-form">
-            <span class="form-caption">Contact Me</span>
+            <span class="form-caption">Email Me</span>
             <span class="form-validation">one or more details are missing!!!</span>
             <div class="custom-ddl">
               <span class="custom-ddl-val contact-reason">Select Reason</span>
@@ -648,7 +648,7 @@
                 <span class="custom-ddl-arrow"></span>
               </span>
               <ul>
-                <li>Select Reason</li>
+                <li class="disabled">Select Reason</li>
                 <li>I need help with app creation</li>
                 <li>I need help with knowledge you possess</li>
                 <li>Others</li>
@@ -667,11 +667,15 @@
             </div>
             <input class="contact-form-control" type="submit" value="Submit" />
           </form>
-          <button
-            onclick="window.location.href='mailto:richrd77@gmail.com?subject=s&body=b'"
-          >
-            Click
-          </button>
+          <div class="social-container">
+            <span class="no-select">you can also follow me on below social media</span>
+            <span class="clickable no-select" onclick="window.open('https://www.facebook.com/richardphynmen.p','_blank')"><i class="fab fa-facebook"></i>&nbsp;Facebook</span>
+            <span class="clickable no-select" onclick="window.open('https://www.instagram.com/richrd77dev','_blank')"><i class="fab fa-instagram"></i>&nbsp;Instagram</span>
+            <span class="clickable no-select" onclick="window.open('https://www.linkedin.com/in/richrd77','_blank')"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</span>
+            <br>
+            <span class="no-select">check out my Github page for source code.</span>
+            <span class="clickable no-select" onclick="window.open('https://github.com/richrd77','_blank')"><i class="fab fa-github"></i>&nbsp;GitHub</span>
+          </div>
         </div>
       </div>
     </div>
@@ -691,7 +695,7 @@
         ></i>
         <i
           class="fab fa-instagram-square clickable social"
-          onclick="window.open('https://www.instagram.com/honestcoder','_blank')"
+          onclick="window.open('https://www.instagram.com/richrd77dev','_blank')"
         ></i>
         Richard Prakash
       </div>
