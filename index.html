@@ -641,7 +641,9 @@
         <div class="contact-wrapper">
           <form class="contact-form">
             <span class="form-caption">Email Me</span>
-            <span class="form-validation">one or more details are missing!!!</span>
+            <span class="form-validation"
+              >one or more details are missing!!!</span
+            >
             <div class="custom-ddl">
               <span class="custom-ddl-val contact-reason">Select Reason</span>
               <span class="custom-ddl-arrow-cont">
@@ -668,13 +670,33 @@
             <input class="contact-form-control" type="submit" value="Submit" />
           </form>
           <div class="social-container">
-            <span class="no-select">you can also follow me on below social media</span>
-            <span class="clickable no-select" onclick="window.open('https://www.facebook.com/richardphynmen.p','_blank')"><i class="fab fa-facebook"></i>&nbsp;Facebook</span>
-            <span class="clickable no-select" onclick="window.open('https://www.instagram.com/richrd77dev','_blank')"><i class="fab fa-instagram"></i>&nbsp;Instagram</span>
-            <span class="clickable no-select" onclick="window.open('https://www.linkedin.com/in/richrd77','_blank')"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</span>
-            <br>
-            <span class="no-select">check out my Github page for source code.</span>
-            <span class="clickable no-select" onclick="window.open('https://github.com/richrd77','_blank')"><i class="fab fa-github"></i>&nbsp;GitHub</span>
+            <span class="no-select"
+              >you can also follow me on below social media</span
+            >
+            <span
+              class="clickable no-select"
+              onclick="window.open('https://www.facebook.com/richardphynmen.p','_blank')"
+              ><i class="fab fa-facebook"></i>&nbsp;Facebook</span
+            >
+            <span
+              class="clickable no-select"
+              onclick="window.open('https://www.instagram.com/richrd77dev','_blank')"
+              ><i class="fab fa-instagram"></i>&nbsp;Instagram</span
+            >
+            <span
+              class="clickable no-select"
+              onclick="window.open('https://www.linkedin.com/in/richrd77','_blank')"
+              ><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</span
+            >
+            <br />
+            <span class="no-select"
+              >check out my Github page for source code.</span
+            >
+            <span
+              class="clickable no-select"
+              onclick="window.open('https://github.com/richrd77','_blank')"
+              ><i class="fab fa-github"></i>&nbsp;GitHub</span
+            >
           </div>
         </div>
       </div>
@@ -760,15 +782,24 @@
           case "skills":
             LoadSkills();
             ClearServices();
+            ClearContacts();
             break;
 
           case "services":
             LoadServices();
+            ClearContacts();
             ClearSkills();
+            break;
+
+          case "contact":
+            ClearServices();
+            ClearContacts();
+            LoadContacts();
             break;
 
           default:
             ClearSkills();
+            ClearContacts();
             ClearServices();
             break;
         }
@@ -940,7 +971,7 @@
         const sub = document.querySelector(".contact-reason");
         const body = document.querySelector(".contact-xtra-info");
         let validForm = true;
-        if (!sub.innerText || sub.innerText.toLowerCase() == 'select reason') {
+        if (!sub.innerText || sub.innerText.toLowerCase() == "select reason") {
           sub.classList.add("error");
           sub.nextElementSibling.classList.add("error");
           validForm = false;
@@ -950,7 +981,9 @@
           validForm = false;
         }
         if (validForm) {
-          document.querySelector('.form-validation').classList.remove('form-validation-fail');
+          document
+            .querySelector(".form-validation")
+            .classList.remove("form-validation-fail");
           sub.classList.remove("error");
           sub.nextElementSibling.classList.remove("error");
           body.classList.remove("error");
@@ -958,8 +991,29 @@
             sub.innerText
           )}&body=${body.value}`;
         } else {
-          document.querySelector('.form-validation').classList.add('form-validation-fail');
+          document
+            .querySelector(".form-validation")
+            .classList.add("form-validation-fail");
         }
+      }
+
+      const loopChild = (p, opacity) => {
+          let child2 = p.children.length;
+          for (let c = 0; c < child2; c++) {
+            setTimeout(() => {
+              p.children[c].style.opacity = opacity;
+            }, 200 + c * 150);
+          }
+        };
+
+      function LoadContacts() {
+        loopChild(document.querySelector(".contact-wrapper").firstElementChild, 1);
+        loopChild(document.querySelector(".contact-wrapper").lastElementChild, 1);
+      }
+
+      function ClearContacts() {
+        loopChild(document.querySelector(".contact-wrapper").firstElementChild, 0);
+        loopChild(document.querySelector(".contact-wrapper").lastElementChild, 0);
       }
     </script>
   </body>

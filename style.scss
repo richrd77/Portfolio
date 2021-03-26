@@ -327,12 +327,16 @@ td + td {
   background-color: white;
   user-select: none;
   padding: 0 0.25em;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .contact-form-control {
   width: 80%;
   margin-bottom: 1em;
   outline: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .contact-form-control:focus {
@@ -365,6 +369,7 @@ input[type="submit"].contact-form-control:hover {
   cursor: pointer;
   // box-shadow: 0px 0 4px 2px #bebbbb;
   margin: 1em 0;
+  opacity: 0;
 }
 
 .custom-ddl > ul {
@@ -439,6 +444,7 @@ input[type="submit"].contact-form-control:hover {
 .contact-xtra-info {
   font-size: 1em;
   font-family: inherit;
+  opacity: 1 !important;
 }
 
 .contact-xtra-info::placeholder {
@@ -481,6 +487,11 @@ li.disabled {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.social-container > span {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 
 .show-services {
@@ -560,6 +571,14 @@ li.disabled {
     align-items: center;
     justify-content: center;
     padding: 0.5em 0;
+  }
+
+  .contact-wrapper{
+    flex-direction: column;
+  }
+
+  .social-container {
+    margin-top: 1em;
   }
 }
 
