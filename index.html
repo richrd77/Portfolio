@@ -998,22 +998,41 @@
       }
 
       const loopChild = (p, opacity) => {
-          let child2 = p.children.length;
-          for (let c = 0; c < child2; c++) {
-            setTimeout(() => {
-              p.children[c].style.opacity = opacity;
-            }, 200 + c * 150);
-          }
-        };
+        let child2 = p.children.length;
+        for (let c = 0; c < child2; c++) {
+          setTimeout(() => {
+            p.children[c].style.opacity = opacity;
+          }, 200 + c * 150);
+        }
+      };
 
       function LoadContacts() {
-        loopChild(document.querySelector(".contact-wrapper").firstElementChild, 1);
-        loopChild(document.querySelector(".contact-wrapper").lastElementChild, 1);
+        loopChild(
+          document.querySelector(".contact-wrapper").firstElementChild,
+          1
+        );
+        loopChild(
+          document.querySelector(".contact-wrapper").lastElementChild,
+          1
+        );
       }
 
       function ClearContacts() {
-        loopChild(document.querySelector(".contact-wrapper").firstElementChild, 0);
-        loopChild(document.querySelector(".contact-wrapper").lastElementChild, 0);
+        loopChild(
+          document.querySelector(".contact-wrapper").firstElementChild,
+          0
+        );
+        loopChild(
+          document.querySelector(".contact-wrapper").lastElementChild,
+          0
+        );
+        document.querySelectorAll(".contact-wrapper .error").forEach((e) => {
+          e.classList.remove("error");
+        });
+
+        document.querySelectorAll(".contact-wrapper .form-validation-fail").forEach((e) => {
+          e.classList.remove("form-validation-fail");
+        });
       }
     </script>
   </body>
