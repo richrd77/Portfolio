@@ -6,10 +6,10 @@ import { StackComponent } from './components/stack/stack.component';
 import { WorkComponent } from './components/work/work.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch:'full' },
-  { path: 'work', component: WorkComponent },
-  { path: 'stack', component: StackComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full', data: { animationState: 1 } },
+  { path: 'work', component: WorkComponent, data: { animationState: 2 } },
+  { path: 'stack', component: StackComponent, data: { animationState: 3 } },
+  { path: 'contact', component: ContactComponent, data: { animationState: 4 } },
 ];
 
 @NgModule({
