@@ -1,0 +1,39 @@
+div.header-wrapper {
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > div.name-logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        > img {
+            display: inline-block;
+            height: 50px;
+            object-fit: contain;
+        }
+        > span.name {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        > span.designation {
+            color: gray; //TODO: change acc to theme
+        }
+    }
+    > nav {
+        > ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            > li {
+                &.active {
+                    color: #00aaff;
+                    text-shadow:
+                        0 0 1px #00aaffcc,
+                        0 0 2px #00aaff4d;
+                }
+            }
+        }
+    }
+}
