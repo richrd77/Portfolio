@@ -20,6 +20,9 @@ div.footer-wrapper {
             }
         }
         > span.desc {
+            a {
+                text-decoration: none;
+            }
         }
     }
     > div:nth-of-type(1) {
