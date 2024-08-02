@@ -4,7 +4,12 @@
         <span class="name">Richard Prakash</span>
         <span class="designation">Senior fullstack developer</span>
     </div>
-    <nav>
+    <button class="ham" (click)="ShowMenu($event)">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav #na>
         <ul>
             <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a routerLink="">Home</a></li>
             <li [routerLinkActive]="['active']"><a routerLink="services">Services</a></li>
