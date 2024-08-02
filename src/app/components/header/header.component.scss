@@ -8,6 +8,9 @@ div.header-wrapper {
     @media (max-width: $breaking-point) {
         position: relative;
     }
+    @media (max-width:712px) {
+        padding: 1em;
+    }
     > div.name-logo {
         display: flex;
         gap: 10px;
@@ -17,12 +20,26 @@ div.header-wrapper {
             height: 50px;
             object-fit: contain;
         }
-        > span.name {
-            font-weight: 600;
-            font-size: 2rem;
-        }
-        > span.designation {
-            color: gray; //TODO: change acc to theme
+        >div.name-des {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            @media (max-width:712px) {
+                flex-direction: column;
+            }
+            > span.name {
+                font-weight: 600;
+                font-size: 2rem;
+                @media (max-width:712px) {
+                    font-size: 1.5rem;
+                }
+            }
+            > span.designation {
+                color: gray; //TODO: change acc to theme
+                @media (max-width:712px) {
+                    font-size: 0.9rem;
+                }
+            }
         }
     }
     > nav {
@@ -35,6 +52,7 @@ div.header-wrapper {
             overflow-y: hidden;
             pointer-events: none;
             transition: max-height 0.5s ease-out;
+            background-color: white;
             &.show {
                 pointer-events: all;
                 max-height: 1000px;
