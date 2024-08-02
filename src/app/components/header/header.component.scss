@@ -28,7 +28,7 @@ div.header-wrapper {
             gap: 2em;
             > li {
                 &.active {
-                    color: #00aaff;
+                    color: #00aaff; // todo: theme
                     text-shadow:
                         0 0 1px #00aaffcc,
                         0 0 2px #00aaff4d;
