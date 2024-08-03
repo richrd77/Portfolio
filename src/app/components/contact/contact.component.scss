@@ -51,6 +51,9 @@ div.contact-wrapper {
                 width: 300px;
                 font-size: inherit;
                 font-family: inherit;
+                @media (max-width: 500px) {
+                    width: auto;
+                }
             }
         }
         > div.row {

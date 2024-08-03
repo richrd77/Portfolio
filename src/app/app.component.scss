@@ -1,4 +1,7 @@
 main {
     min-height: calc(100vh - 11.52em);
     padding: 1em 2em;
+    @media (max-width: 500px) {
+        padding: 1em;
+    }
 }
