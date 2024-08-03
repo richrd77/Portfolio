@@ -14,10 +14,16 @@ div.service-wrapper {
             gap: 1em;
         }
         > div.icon {
+            opacity: 0;
+            animation: ltor 0.7s ease-in-out 0s 1 forwards;
             > svg {
                 font-size: 5rem;
                 height: 5rem;
             }
+        }
+        >p {
+            opacity: 0;
+            animation: rtol 0.7s ease-in-out 0s 1 forwards;
         }
     }
 }

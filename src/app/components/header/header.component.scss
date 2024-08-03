@@ -55,7 +55,8 @@ div.header-wrapper {
             background-color: var(--bg-color);
             &.show {
                 pointer-events: all;
-                max-height: 1000px;
+                max-height: 219px;
+                z-index: 2;
             }
         }
         > ul {
