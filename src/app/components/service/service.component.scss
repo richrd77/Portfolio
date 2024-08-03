@@ -10,7 +10,7 @@ div.service-wrapper {
         align-items: center;
         margin: 3em 0;
         @media (max-width:1240px) {
-            flex-direction: column-reverse;
+            flex-direction: column;
             gap: 1em;
         }
         > div.icon {
