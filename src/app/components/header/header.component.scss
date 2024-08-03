@@ -1,0 +1,102 @@
+$breaking-point: 980px;
+
+div.header-wrapper {
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $breaking-point) {
+        position: relative;
+    }
+    @media (max-width:712px) {
+        padding: 1em;
+    }
+    > div.name-logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        > img {
+            display: inline-block;
+            height: 50px;
+            object-fit: contain;
+        }
+        >div.name-des {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            @media (max-width:712px) {
+                flex-direction: column;
+            }
+            > span.name {
+                font-weight: 600;
+                font-size: 2rem;
+                @media (max-width:712px) {
+                    font-size: 1.5rem;
+                }
+            }
+            > span.designation {
+                color: gray; //TODO: change acc to theme
+                @media (max-width:712px) {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    > nav {
+        @media (max-width: $breaking-point) {
+            position: absolute;
+            right: 5%;
+            top: 100%;
+            box-shadow: 0 0 8px 0 gray;
+            max-height: 0;
+            overflow-y: hidden;
+            pointer-events: none;
+            transition: max-height 0.5s ease-out;
+            background-color: white;
+            &.show {
+                pointer-events: all;
+                max-height: 1000px;
+            }
+        }
+        > ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            @media (max-width: $breaking-point) {
+                padding: 1.5em 1em;
+                flex-direction: column;
+            }
+            > li {
+                &.active {
+                    color: #00aaff; // todo: theme
+                    text-shadow:
+                        0 0 1px #00aaffcc,
+                        0 0 2px #00aaff4d;
+                }
+            }
+        }
+    }
+    > button.ham {
+        display: none;
+        border: transparent;
+        background-color: transparent;
+        gap: 8px;
+        flex-direction: column;
+        @media (max-width: $breaking-point) {
+            display: flex;
+        }
+        > span {
+            display: inline-block;
+            height: 3px;
+            width: 45px;
+            background-color: black;
+        }
+        > span:nth-of-type(1) {
+        }
+        > span:nth-of-type(2) {
+        }
+        > span:nth-of-type(3) {
+        }
+    }
+}

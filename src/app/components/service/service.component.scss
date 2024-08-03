@@ -1,0 +1,25 @@
+div.service-wrapper {
+    padding: 1em;
+    > h1 {
+        text-align: center;
+    }
+    > section.service {
+        padding: 1em 2em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 3em 0;
+        @media (max-width:1240px) {
+            flex-direction: column-reverse;
+            gap: 1em;
+        }
+        > div.icon {
+            > svg {
+                font-size: 5rem;
+                height: 5rem;
+            }
+        }
+        > p.service-text {
+        }
+    }
+}

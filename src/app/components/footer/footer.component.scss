@@ -1,0 +1,51 @@
+div.footer-wrapper {
+    padding: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        gap: 2em;
+        align-items: start;
+    }
+    > div {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+        > span.head {
+            font-weight: 600;
+            &.do-not {
+                font-weight: unset;
+            }
+        }
+        > span.desc {
+            &.ins {
+                font-size: 0.8rem;
+            }
+            a {
+                text-decoration: none;
+            }
+            > ul {
+                display: flex;
+                gap: 0.8em;
+                list-style: none;
+                > li {
+                    > a {
+                        > svg {
+                            height: 1em;
+                            width: 1em;
+                            font-size: 1.25em;
+                        }
+                        &:hover,
+                        &:active {
+                            >svg {
+                                fill: #00aaff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
