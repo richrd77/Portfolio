@@ -51,9 +51,15 @@ div.contact-wrapper {
                 width: 300px;
                 font-size: inherit;
                 font-family: inherit;
+                color: inherit;
                 @media (max-width: 500px) {
                     width: auto;
                 }
+            }
+            &:focus,
+            &:focus-within {
+                border-color: var(--accent-color);
+                color: var(--accent-color);
             }
         }
         > div.row {
