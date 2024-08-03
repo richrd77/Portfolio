@@ -3,6 +3,10 @@ div.contact-wrapper {
     justify-content: space-around;
     align-items: center;
     min-height: calc(100vh - 14em);
+    @media (max-width:850px) {
+        flex-direction: column;
+        gap: 2em;
+    }
     > div.social {
         > p {
             font-weight: 600;
