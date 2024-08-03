@@ -26,7 +26,7 @@ div.contact-wrapper {
                     &:hover,
                     &:active {
                         > svg {
-                            fill: #00aaff;
+                            fill: var(--accent-color);
                         }
                     }
                 }
@@ -37,7 +37,7 @@ div.contact-wrapper {
         padding: 1em;
         > div.control {
             margin: 1em 0;
-            border-bottom: 1px solid gray;
+            border-bottom: 1px solid var(--border-color);
             padding: 10px;
             > input,
             > textarea {
@@ -52,13 +52,13 @@ div.contact-wrapper {
         > div.row {
             margin: 1em 0;
             > p.errors {
-                color: red;
+                color: var(--warn-color);
                 font-size: 0.9rem;
             }
             > input {
                 padding: 0.9em 2em;
-                background-color: #00aaff;
-                color: white;
+                background-color: var(--accent-color);
+                color: var(--bg-color);
                 cursor: pointer;
                 border: transparent;
                 font-size: inherit;
