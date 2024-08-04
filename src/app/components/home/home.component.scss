@@ -10,7 +10,7 @@ div.home-wrapper {
     }
     > img.me {
         height: 300px;
-        @media (max-width:400px) {
+        @media (max-width: 400px) {
             height: 200px;
         }
         display: block;
@@ -38,9 +38,17 @@ div.home-wrapper {
             transition: all 0.5s ease-in;
             width: fit-content;
             text-decoration: none;
+            box-shadow:
+                0 0 4px 0 rgb(0 170 255 / 70%),
+                0 0 8px 0 rgb(0 170 255 / 50%),
+                0 0 12px 0 rgb(0 170 255 / 30%);
+            text-shadow:
+                0 0 4px rgb(0 170 255 / 70%),
+                0 0 8px rgb(0 170 255 / 50%),
+                0 0 12px rgb(0 170 255 / 30%);
             &:hover {
                 background-color: var(--accent-color);
-                color: var(--bg-color);
+                color: var(--color);
             }
             @media (max-width: 410px) {
                 font-size: 1rem;
